@@ -1,15 +1,16 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 function Nav() {
+  console.log(useLocation());
   return (
     <nav>
       <h1><Link to="/">&lt;WebTools/&gt;</Link></h1>
       <ul>
         <li>Button Generator</li>
-        <Link to="keycodes">
+        <NavLink to="keycodes">
           <li>JS Keycodes</li>
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

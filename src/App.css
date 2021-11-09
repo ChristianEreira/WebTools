@@ -42,6 +42,10 @@ nav li:hover {
     background: #0F0F0F;
 }
 
+nav .active li {
+    background: #0072B2;
+}
+
 nav ul {
     width: 100%;
     margin: 0;
