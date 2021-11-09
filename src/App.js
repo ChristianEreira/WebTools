@@ -13,7 +13,7 @@ function App() {
           <Route path="keycodes" element={<KeycodesPage />} />
         </Routes>
       </div>
-      <div id="footer">Footer text</div>
+      <div id="footer">Developed by Christian Ereira - View source at <a href="https://github.com/ChristianEreira/WebTools">GitHub</a></div>
     </Router>
   );
 }

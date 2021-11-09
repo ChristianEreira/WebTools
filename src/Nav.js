@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav>
-      <Link to="/">
-        <h1>&lt;WebTools/&gt;</h1>
-      </Link>
+      <h1><Link to="/">&lt;WebTools/&gt;</Link></h1>
       <ul>
         <li>Button Generator</li>
         <Link to="keycodes">
