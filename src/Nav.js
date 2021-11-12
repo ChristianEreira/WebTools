@@ -7,29 +7,36 @@ import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 function Nav() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuOpen, setMenuOpen] = useState(false);
+  let isMobile = windowWidth < 800;
 
   useEffect(() => {
     window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
   }, []);
 
   function toggleMenu(e) {
-    e.preventDefault();
-    setMenuOpen(!menuOpen);
+    if (isMobile) { setMenuOpen(!menuOpen); }
   }
 
-  let isMobile = windowWidth < 800;
+  function NavButton(props) {
+    return (
+      <NavLink to={props.link} onClick={toggleMenu}>
+        {props.children}
+      </NavLink>
+    );
+  }
+
   return (
     <div>
-    <nav className={isMobile ? ("mobileNav" + (menuOpen ? "" : " hidden")) : ""}>
-      <h1><Link to="/">&lt;WebTools/&gt;</Link></h1>
-      <ul>
-        <li>Button Generator</li>
-        <NavLink to="keycodes">
-          <li>JS Keycodes</li>
-        </NavLink>
-      </ul>
-    </nav>
-    {isMobile && <div id="menuBtn" onClick={toggleMenu}><FontAwesomeIcon icon={menuOpen ? faTimes : faBars} /></div>}
+      <nav className={isMobile ? ("mobileNav" + (menuOpen ? "" : " hidden")) : ""}>
+        <h1><NavButton link="/">&lt;WebTools/&gt;</NavButton></h1>
+        <ul>
+          <li>Button Generator</li>
+          <NavButton link="keycodes">
+            <li>JS Keycodes</li>
+          </NavButton>
+        </ul>
+      </nav>
+      {isMobile && <div id="menuBtn" onClick={toggleMenu}><FontAwesomeIcon icon={menuOpen ? faTimes : faBars} /></div>}
     </div>
   );
 }
