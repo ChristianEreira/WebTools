@@ -41,6 +41,15 @@ nav.mobileNav {
     display: flex !important;
     position: fixed;
     z-index: 999;
+    top: 0;
+    right: 0;
+    background: #0F0F0F;
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
 
 nav a {

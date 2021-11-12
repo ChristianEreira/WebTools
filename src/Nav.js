@@ -1,6 +1,8 @@
 import './App.css';
 import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Nav() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -27,7 +29,7 @@ function Nav() {
         </NavLink>
       </ul>
     </nav>
-    {isMobile && <div id="menuBtn" onClick={toggleMenu}>Menu</div>}
+    {isMobile && <div id="menuBtn" onClick={toggleMenu}><FontAwesomeIcon icon={menuOpen ? faTimes : faBars} /></div>}
     </div>
   );
 }
