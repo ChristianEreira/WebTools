@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && cd build && git push deploy master"
+    "deploy": "npm run build && cp -rf build/* ../_Deploy_WebTools && cd ../_Deploy_WebTools && git add . && git commit -a -m 'deploy' && git push deploy master --force"
   },
   "eslintConfig": {
     "extends": [
