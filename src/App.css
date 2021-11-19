@@ -97,17 +97,42 @@ nav h1 {
 }
 
 p.section {
-    background: #3E3E3E;
+    background: #3e3e3e;
     padding: 16px;
     margin: 0 8px;
     border-radius: 8px;
-    font-size: 24px;
 }
 
 p.bigNumber {
     margin: 64px 8px;
     font-size: 144px;
     font-weight: 700;
+}
+
+#keycodeTable {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#keycodeTable p {
+    margin: 0;
+}
+
+#keycodeTable p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+#keycodeTableSeperator {
+    border-radius: 8px;
+    width: 8px;
+    background: #515151;
+    margin: 0 24px;
+}
+
+#keycodeTableLeft p {
+    width: 100%;
+    text-align: right;
 }
 
 #footer {
