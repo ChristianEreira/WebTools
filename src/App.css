@@ -43,7 +43,7 @@ nav.mobileNav {
     z-index: 999;
     top: 0;
     right: 0;
-    background: #0F0F0F;
+    background: #0f0f0f;
     margin: 8px;
     width: 40px;
     height: 40px;
@@ -63,11 +63,11 @@ nav li {
 }
 
 nav li:hover {
-    background: #0F0F0F;
+    background: #0f0f0f;
 }
 
 nav .active li {
-    background: #0072B2;
+    background: #0072b2;
 }
 
 nav ul {
@@ -85,6 +85,29 @@ nav h1 {
 #content {
     display: flex;
     flex: 1;
+}
+
+.centerVert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+p.section {
+    background: #3E3E3E;
+    padding: 16px;
+    margin: 0 8px;
+    border-radius: 8px;
+    font-size: 24px;
+}
+
+p.bigNumber {
+    margin: 64px 8px;
+    font-size: 144px;
+    font-weight: 700;
 }
 
 #footer {
